@@ -4,8 +4,10 @@ const Product = require("../model/Product");
 const product_all = async (req, res) => {
   try {
     const products = await Product.find();
+    console.log(products);
     res.json(products);
   } catch (error) {
+    console.log("aman");
     res.json({ message: error });
   }
 };
